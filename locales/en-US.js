@@ -23,29 +23,30 @@ export default {
   feature: [
     {
       image: '1.svg',
-      title: "Qualified technicians",
+      title: 'Qualified technicians',
       desc: 'Our technicians are carefully selected according to strict standards and have the skills and experience necessary to perform maintenance and repairs accurately and efficiently.',
     },
     {
       image: '2.svg',
-      title: "Diversity of services",
-      desc: 'Providing a comprehensive range of services that include maintenance of computers and mobile phones and application programming'
+      title: 'Diversity of services',
+      desc: 'Providing a comprehensive range of services that include maintenance of computers and mobile phones and application programming',
     },
     {
       image: '3.svg',
-      title: "Ease of use",
-      desc: "The MIT application provides a simple and easy-to-use interface that enables you to request services easily and quickly.",
+      title: 'Ease of use',
+      desc: 'The MIT application provides a simple and easy-to-use interface that enables you to request services easily and quickly.',
     },
   ],
   about: {
     mainTitle: 'MIT app is your ideal choice',
     title: 'About MIT',
-    desc: "<p>A multi-service online store application that allows users to purchase products and services online and have them delivered to their address. The application also includes reservation options for restaurants and events, and facilitates the process of obtaining the required services in an easy and convenient way. Those who are looking for a modern and sophisticated shopping experience, as it provides many distinctive and convenient services that make online shopping easy and enjoyable. Therefore, the application can be downloaded easily and benefit from all the services available on it with comfort and confidence. Get the best online shopping experience with the Pring application. Enjoy competitive prices and high quality of the products you buy through the MIT app. Fast and reliable delivery for all your purchases, with secure and easy payment options</p>",
+    desc: '<p>A multi-service online store application that allows users to purchase products and services online and have them delivered to their address. The application also includes reservation options for restaurants and events, and facilitates the process of obtaining the required services in an easy and convenient way. Those who are looking for a modern and sophisticated shopping experience, as it provides many distinctive and convenient services that make online shopping easy and enjoyable. Therefore, the application can be downloaded easily and benefit from all the services available on it with comfort and confidence. Get the best online shopping experience with the Pring application. Enjoy competitive prices and high quality of the products you buy through the MIT app. Fast and reliable delivery for all your purchases, with secure and easy payment options</p>',
   },
-  downloadText: "<p>You can download the MIT app now by visiting the App Store on your smartphone, searching for MIT, and then downloading the app on your smartphone.</p>",
-  isoLink: "",
-  androidLink: "",
-  address: 'KSA - Jeddah',
+  downloadText:
+    '<p>You can download the MIT app now by visiting the App Store on your smartphone, searching for MIT, and then downloading the app on your smartphone.</p>',
+  isoLink: '',
+  androidLink: '',
+  address: 'Kingdom of Saudi Arabia - Jizan',
   terms: {
     title: 'Terms And Conditions',
   },
@@ -61,5 +62,5 @@ export default {
     phone: 'phone',
     message: 'message',
     send: 'send ',
-    },
+  },
 }

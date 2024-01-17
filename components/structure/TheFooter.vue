@@ -51,7 +51,7 @@
                 <i class="fa-solid fa-fax"></i>
               </span>
 
-              <a href="tel:0566989608"><span class="value"> 0566989608</span></a>
+              <a href="tel:0500283061"><span class="value">0500283061</span></a>
             </li>
 
             <li class="contact_info_item">
@@ -59,7 +59,8 @@
                 <i class="fa-solid fa-location-dot"></i>
               </span>
 
-              <a href="https://goo.gl/maps/pyKsGuyD9gRBR2UC7" target="_blank"> <span class="value"> {{ $t('address') }} </span> </a>
+              <a href="https://goo.gl/maps/pyKsGuyD9gRBR2UC7" target="_blank"> <span class="value"> {{ $t('address') }}
+                </span> </a>
             </li>
           </ul>
 
