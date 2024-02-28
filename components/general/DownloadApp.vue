@@ -4,17 +4,23 @@
       <div class="container-xl">
         <div class="row align-items-center justify-content-between">
           <!-- Start:: Section Text -->
-          <div class="col-lg-6" data-aos-once="true" :data-aos="$i18n.locale == 'ar' ? 'fade-left' : 'fade-right'" data-aos-delay="500" data-aos-duration="1000">
+          <div
+            class="col-lg-6"
+            data-aos-once="true"
+            :data-aos="$i18n.locale == 'ar' ? 'fade-left' : 'fade-right'"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <div class="section_text_wrapper">
               <h2 class="section_title">
-                {{ $t("nav.download") }}
+                {{ $t('nav.download') }}
               </h2>
 
               <p class="section_desc" v-html="$t('downloadText')"></p>
 
               <div class="download_btns_wrapper">
                 <a
-                  href="#"
+                  href="https://apps.apple.com/us/app/mit/id6469110883"
                   target="_blank"
                 >
                   <img
@@ -25,7 +31,7 @@
                 </a>
 
                 <a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.moltaqa.mitClient"
                   target="_blank"
                 >
                   <img
@@ -70,8 +76,8 @@
 
 <script>
 export default {
-  name: "DownloadAppSection",
-};
+  name: 'DownloadAppSection',
+}
 </script>
 
 <style lang="scss" scoped>
