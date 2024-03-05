@@ -2,21 +2,11 @@
   <div id="about_section" class="about_section_content_wrapper">
     <div class="row align-items-center px-5">
       <!-- Start:: Section Image -->
-      <div
-        class="col-md-6"
-        data-aos-once="false"
-        :data-aos="$i18n.locale == 'ar' ? 'fade-left' : 'fade-right'"
-        data-aos-delay="500"
-        data-aos-duration="1000"
-      >
+      <div class="col-md-6" data-aos-once="false" :data-aos="$i18n.locale == 'ar' ? 'fade-left' : 'fade-right'"
+        data-aos-delay="500" data-aos-duration="1000">
         <div class="section_image_wrapper">
-          <img
-            src="~/assets/media/images/about.png"
-            width="450"
-            height="350"
-            alt="About Us Section Image"
-            loading="lazy"
-          />
+          <img src="~/assets/media/images/about.png" width="450" height="350" alt="About Us Section Image"
+            loading="lazy" />
         </div>
       </div>
       <!-- End:: Section Image -->
@@ -24,47 +14,20 @@
       <!-- Start:: Section Text -->
       <div class="col-md-6">
         <div class="logo_wrapper">
-          <img
-            src="~/assets/media/logo/logo1.png"
-            alt="Logo"
-            width="180"
-            height="180"
-            data-aos-once="false"
-            data-aos="fade"
-            data-aos-delay="500"
-            data-aos-duration="1000"
-            loading="lazy"
-          />
+          <img src="~/assets/media/logo/logo1.png" alt="Logo" width="180" height="180" data-aos-once="false"
+            data-aos="fade" data-aos-delay="500" data-aos-duration="1000" loading="lazy" />
         </div>
 
-        <h4
-          class="section_subtitle"
-          data-aos-once="false"
-          data-aos="fade"
-          data-aos-delay="600"
-          data-aos-duration="1000"
-          v-html="terms_title"
-        >
+        <h4 class="section_subtitle" data-aos-once="false" data-aos="fade" data-aos-delay="600" data-aos-duration="1000"
+          v-html="terms_title">
 
         </h4>
-        <h2
-          class="section_title"
-          data-aos-once="false"
-          data-aos="fade"
-          data-aos-delay="700"
-          data-aos-duration="1000"
-        >
+        <h2 class="section_title" data-aos-once="false" data-aos="fade" data-aos-delay="700" data-aos-duration="1000">
           {{ $t("about.title") }}
         </h2>
 
-        <div
-          class="section_desc"
-          data-aos-once="false"
-          data-aos="fade"
-          data-aos-delay="800"
-          data-aos-duration="1000"
-          v-html="terms_content"
-        ></div>
+        <div class="section_desc" data-aos-once="false" data-aos="fade" data-aos-delay="800" data-aos-duration="1000"
+          v-html="terms_content"></div>
       </div>
       <!-- End:: Section Text -->
     </div>
@@ -82,24 +45,23 @@ export default {
     };
   },
 
-  methods:{
+  methods: {
     async getData() {
-    try {
-      return await this.$axios.get(`api/about`).then(response => {
-        this.terms_title = response.data.body.title;
-        this.terms_content = response.data.body.content;
-      console.log(response.data)
-        console.log()
-      }).catch(error => {
-        console.log(error)
-      })
-    } catch (error) {
-      console.log("catch : " + error)
-    }
+      try {
+        return await this.$axios.get(`api/about`).then(response => {
+          this.terms_title = response.data.body.title;
+          this.terms_content = response.data.body.content;
+          console.log(response.data)
+        }).catch(error => {
+          console.log(error)
+        })
+      } catch (error) {
+        console.log("catch : " + error)
+      }
     }
   },
 
-  mounted(){
+  mounted() {
     this.getData();
   }
 };
@@ -149,6 +111,7 @@ export default {
 @media (max-width: 850px) {
   .about_section_content_wrapper {
     padding-block: 30px;
+
     .section_image_wrapper {
       img {
         width: 90%;
@@ -182,12 +145,9 @@ export default {
     }
   }
 }
+
 .about_section_content_wrapper .logo_wrapper img {
-    max-width: 160px;
-    object-fit: contain;
+  max-width: 160px;
+  object-fit: contain;
 }
-
-
-
-
 </style>

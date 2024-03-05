@@ -51,7 +51,9 @@
                 <i class="fa-solid fa-fax"></i>
               </span>
 
-              <a href="tel:0500283061"><span class="value">0500283061</span></a>
+              <a href="tel:0500283061" v-for="(item, index) in phones" :key="'o' + index">
+                <span class="value">{{ item.phone }}</span>
+              </a>
             </li>
 
             <li class="contact_info_item">
@@ -98,6 +100,12 @@
 export default {
   name: "TheFooter",
 
+  data() {
+    return {
+      phones: []
+    }
+  },
+
   methods: {
     // START:: SCROLL TO SECTION
     scrollToSection(section_id) {
@@ -109,6 +117,24 @@ export default {
       }
     },
     // END:: SCROLL TO SECTION
+
+    async getData() {
+      try {
+        return await this.$axios.get(`api/contact-links`).then(response => {
+          this.phones = response.data.data.phoneNumbers;
+        }).catch(error => {
+          console.log(error)
+        })
+      } catch (error) {
+        console.log("catch : " + error)
+      }
+    }
+
   },
+
+  mounted() {
+    this.getData();
+  }
+
 }
 </script>
